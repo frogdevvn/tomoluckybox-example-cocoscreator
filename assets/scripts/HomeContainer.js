@@ -17,7 +17,7 @@ cc.Class({
 
   // update (dt) {},
 
-  onBuyButtonClicked() {
+  onPlayNowButtonClicked() {
     GameController.instance.showMainGameContainer();
   }
 });

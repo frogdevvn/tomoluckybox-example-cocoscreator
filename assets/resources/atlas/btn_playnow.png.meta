@@ -1,16 +1,16 @@
 {
   "ver": "2.3.0",
-  "uuid": "da0120ba-be57-43af-9e0e-097a9999182a",
+  "uuid": "c69b3d8f-38c5-431a-a444-4ee2c97d1ae9",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
   "premultiplyAlpha": false,
   "platformSettings": {},
   "subMetas": {
-    "btn_buyticket": {
+    "btn_playnow": {
       "ver": "1.0.4",
-      "uuid": "4097de95-915e-4760-9968-90959823107e",
-      "rawTextureUuid": "da0120ba-be57-43af-9e0e-097a9999182a",
+      "uuid": "a518da2d-9f30-45ce-8775-7ff0a776be37",
+      "rawTextureUuid": "c69b3d8f-38c5-431a-a444-4ee2c97d1ae9",
       "trimType": "custom",
       "trimThreshold": 1,
       "rotated": false,

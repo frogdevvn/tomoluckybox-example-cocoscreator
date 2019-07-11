@@ -1,15 +1,19 @@
-const GameController = require('GameController');
-const Utils = require('Utils');
+const Web3Controller = require('Web3Controller');
 
 cc.Class({
   extends: cc.Component,
 
   properties: {
-
+    openButton: cc.Button,
+    statusText: cc.Label
   },
 
   onLoad() {
 
+  },
+
+  onEnable() {
+    this.statusText.string = 'Choose your lucky box!';
   },
 
   start() {
@@ -19,14 +23,8 @@ cc.Class({
   // update (dt) {},
 
   onOpenButtonClicked() {
-    let rnd = Utils.randomInt(1, 10);
-    cc.log(rnd);
-
-    if (rnd <= 5)
-      GameController.instance.showWinGameContainer(10);
-    else
-      GameController.instance.showLoseGameContainer();
-
-    GameController.instance.unselectAllLuckyBox();
+    this.openButton.interactable = false;
+    this.statusText.string = 'Waitting network confimations...';
+    Web3Controller.instance.sendRequestOpenLuckyBox();
   }
 });

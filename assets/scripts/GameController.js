@@ -1,3 +1,6 @@
+const RESULT_WIN = 1;
+const RESULT_LOSE = 0;
+
 const GameController = cc.Class({
   extends: cc.Component,
 
@@ -9,6 +12,7 @@ const GameController = cc.Class({
 
     openButton: cc.Button,
     selectedLuckyBox: cc.Node,
+    selectedLuckyBoxId: 0,
     arrLuckyBox: [cc.Node],
   },
 
@@ -20,6 +24,7 @@ const GameController = cc.Class({
     GameController.instance = this;
 
     this.selectedLuckyBox = null;
+    this.selectedLuckyBoxId = 0;
   },
 
   start() {
@@ -40,9 +45,9 @@ const GameController = cc.Class({
     this.homeContainer.active = false;
   },
 
-  showWinGameContainer(amountWin) {
+  showWinGameContainer(amountPrize) {
     this.mainGameContainer.active = false;
-    this.winGameContainer.getComponent('WinGameContainer').show(amountWin);
+    this.winGameContainer.getComponent('WinGameContainer').show(amountPrize);
   },
   
   showLoseGameContainer() {
@@ -50,19 +55,30 @@ const GameController = cc.Class({
     this.loseGameContainer.getComponent('LoseGameContainer').show();
   },
 
+  showResultOpenLuckyBox(result, amountPrize) {
+    if(result == RESULT_WIN) {
+      this.showWinGameContainer(amountPrize);
+    }
+    else {
+      this.showLoseGameContainer();
+    }
+  },
+
   unselectAllLuckyBox() {
     this.arrLuckyBox.forEach(luckyBox => {
       luckyBox.getComponent("LuckyBox").unselect();
     });
     this.selectedLuckyBox = null;
+    this.selectedLuckyBoxId = 0;
   },
 
   setEnableOpenButton(value) {
     this.openButton.interactable = value;
   },
 
-  setSelectedLuckyBox(luckyBox) {
+  setSelectedLuckyBox(luckyBox, luckyBoxid) {
     this.selectedLuckyBox = luckyBox;
+    this.selectedLuckyBoxId = luckyBoxid;
     luckyBox.getComponent("LuckyBox").select();
     this.arrLuckyBox.forEach(luckyBox => {
       if (luckyBox != this.selectedLuckyBox)

@@ -19,9 +19,9 @@ cc.Class({
 
   // update (dt) {},
 
-  onSelectClicked() {
+  onSelectClicked(event, customData) {
     if (!this.isSelected) {
-      GameController.instance.setSelectedLuckyBox(this.node);
+      GameController.instance.setSelectedLuckyBox(this.node, customData);
       GameController.instance.setEnableOpenButton(true);
     }
   },
