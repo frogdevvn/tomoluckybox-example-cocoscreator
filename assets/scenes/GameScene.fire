@@ -3664,7 +3664,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 657.25,
+      "width": 111.88,
       "height": 30.24
     },
     "_anchorPoint": {
@@ -3709,8 +3709,8 @@
     "_enabled": true,
     "_materials": [],
     "_useOriginalSize": false,
-    "_string": "Account: 0xED1aFB4A099023A723F3f0c1378632A7b2Ac6784",
-    "_N$string": "Account: 0xED1aFB4A099023A723F3f0c1378632A7b2Ac6784",
+    "_string": "Account: ?",
+    "_N$string": "Account: ?",
     "_fontSize": 24,
     "_lineHeight": 24,
     "_enableWrapText": true,
@@ -3783,7 +3783,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 222.77,
+      "width": 180.23,
       "height": 30.24
     },
     "_anchorPoint": {
@@ -3828,8 +3828,8 @@
     "_enabled": true,
     "_materials": [],
     "_useOriginalSize": false,
-    "_string": "Balance: 1000 TOMO",
-    "_N$string": "Balance: 1000 TOMO",
+    "_string": "Balance: ? TOMO",
+    "_N$string": "Balance: ? TOMO",
     "_fontSize": 24,
     "_lineHeight": 24,
     "_enableWrapText": true,
